@@ -1,0 +1,6 @@
+{
+  "hooks": {
+    "pre-commit": "echo \"git commit trigger husky pre-commit hook\" && lint-staged",
+    "post-commit": "git update-index --again"
+  }
+}

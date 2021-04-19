@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.app-body {
+    @apply font-sans min-h-[100vh] bg-[#282c34] dark:bg-black text-base md:text-2xl text-white dark:text-gray-400;
+}

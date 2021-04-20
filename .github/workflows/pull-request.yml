@@ -1,4 +1,4 @@
-# PR to dev/main, run tests and create review
+# PR to dev/main, run tests
 name: Pull Request CI
 
 on:

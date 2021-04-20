@@ -1,1 +1,3 @@
-export { default as Logo } from './logo.svg'
+import { ReactComponent as Logo } from './logo.svg'
+
+export { Logo }

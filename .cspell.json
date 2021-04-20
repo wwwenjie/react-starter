@@ -3,7 +3,9 @@
   "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/master/cspell.schema.json",
   "language": "en",
   "words": [
-    "vite"
+    "vite",
+    "testid",
+    "svgr"
   ],
   "flagWords": [],
   "ignorePaths": [
@@ -11,6 +13,6 @@
     "yarn.lock",
     "tsconfig.json",
     "node_modules/**",
-    "src/public/**",
+    "src/public/**"
   ]
 }

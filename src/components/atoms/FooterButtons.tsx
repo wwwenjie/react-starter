@@ -9,9 +9,9 @@ export const DarkModeButton: FC = () => {
   const { isDark, toggleDark } = useDark()
 
   return isDark ? (
-    <BiMoon onClick={toggleDark} className="footer-button" />
+    <BiMoon data-testid="dark-button" onClick={toggleDark} className="footer-button" />
   ) : (
-    <BiSun onClick={toggleDark} className="footer-button" />
+    <BiSun data-testid="dark-button" onClick={toggleDark} className="footer-button" />
   )
 }
 
@@ -23,7 +23,13 @@ export const LanguageButton: FC = () => {
     await i18n.changeLanguage(locales[(locales.indexOf(i18n.language) + 1) % locales.length])
   }
 
-  return <IoLanguage onClick={handleLanguageClick} className="footer-button" />
+  return (
+    <IoLanguage
+      data-testid="language-button"
+      onClick={handleLanguageClick}
+      className="footer-button"
+    />
+  )
 }
 
 export const GitHubButton: FC = () => {
@@ -31,5 +37,11 @@ export const GitHubButton: FC = () => {
     window.open('https://github.com/wwwenjie/react-starter', '_blank')
   }
 
-  return <IoLogoGithub onClick={handleGitHubClick} className="footer-button" />
+  return (
+    <IoLogoGithub
+      data-testid="github-button"
+      onClick={handleGitHubClick}
+      className="footer-button"
+    />
+  )
 }

@@ -1,12 +1,15 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import { I18nextProvider } from 'react-i18next'
 import App from './App'
 import './tailwind.css'
-import './locales/i18n'
+import i18n from './locales/i18n'
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <I18nextProvider i18n={i18n}>
+      <App />
+    </I18nextProvider>
   </React.StrictMode>,
   document.getElementById('root'),
 )

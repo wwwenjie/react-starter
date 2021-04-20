@@ -12,7 +12,7 @@
     "test:lint": "eslint src --ext .ts,.tsx",
     "test:prettier": "prettier \"src/**/*.ts\" --list-different",
     "test:spelling": "cspell \"{README.md,.github/*.md,src/**/**}\"",
-    "test:build": "tsc",
+    "test:build": "run-p build",
     "test:unit": "jest --collectCoverage",
     "watch": "run-p watch:*",
     "watch:test": "jest --watch",

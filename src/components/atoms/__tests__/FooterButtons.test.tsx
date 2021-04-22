@@ -3,22 +3,95 @@ import { fireEvent, render, screen } from '@testing-library/react'
 import { DarkModeButton, GitHubButton, LanguageButton } from '@components/atoms'
 import i18n from '@locales/i18n'
 import { handleMatchMedia } from '@utils'
+import { ColorScheme } from '@hooks'
 
 describe('<FooterButtons />', () => {
-  it('<DarkModeButton /> should change color scheme when click', () => {
+  beforeEach(() => {
     handleMatchMedia()
+  })
+
+  afterEach(() => {
+    localStorage.clear()
+  })
+
+  const expectColorScheme = (colorScheme: ColorScheme) => {
+    expect(JSON.parse(localStorage.getItem('color-scheme') || '')).toStrictEqual(colorScheme)
+  }
+
+  it('<DarkModeButton /> should change color scheme when click', () => {
     render(<DarkModeButton />)
 
-    // button will change due to color-scheme change
-    const button = () => screen.getByTestId('dark-button')
+    const moonButton = screen.getByTestId('moon-button')
 
-    expect(localStorage.getItem('color-scheme')).toStrictEqual('"auto"')
+    const sunButton = screen.getByTestId('sun-button')
 
-    fireEvent.click(button())
-    expect(localStorage.getItem('color-scheme')).toStrictEqual('"dark"')
+    expectColorScheme('auto')
 
-    fireEvent.click(button())
-    expect(localStorage.getItem('color-scheme')).toStrictEqual('"light"')
+    fireEvent.click(sunButton)
+    expectColorScheme('dark')
+
+    fireEvent.click(moonButton)
+    expectColorScheme('light')
+  })
+
+  it('<DarkModeButton /> should hide moon button when color scheme is auto and light', () => {
+    render(<DarkModeButton />)
+
+    const moonButton = screen.getByTestId('moon-button')
+
+    expectColorScheme('auto')
+    expect(moonButton).toHaveClass('hidden')
+
+    fireEvent.click(moonButton)
+    expectColorScheme('dark')
+
+    fireEvent.click(moonButton)
+    expectColorScheme('light')
+
+    expect(moonButton).toHaveClass('hidden')
+  })
+
+  it('<DarkModeButton /> should hide sun button when color scheme is dark', () => {
+    render(<DarkModeButton />)
+
+    const sunButton = screen.getByTestId('sun-button')
+
+    expectColorScheme('auto')
+
+    fireEvent.click(sunButton)
+    expectColorScheme('dark')
+
+    expect(sunButton).toHaveClass('hidden')
+  })
+
+  it('<DarkModeButton /> should show sun button when color scheme is auto and light', () => {
+    render(<DarkModeButton />)
+
+    const sunButton = screen.getByTestId('sun-button')
+
+    expectColorScheme('auto')
+    expect(sunButton.hidden).toBeFalsy()
+
+    fireEvent.click(sunButton)
+    expectColorScheme('dark')
+
+    fireEvent.click(sunButton)
+    expectColorScheme('light')
+
+    expect(sunButton.hidden).toBeFalsy()
+  })
+
+  it('<DarkModeButton /> should show moon button when color scheme is dark', () => {
+    render(<DarkModeButton />)
+
+    const moonButton = screen.getByTestId('moon-button')
+
+    expectColorScheme('auto')
+
+    fireEvent.click(moonButton)
+    expectColorScheme('dark')
+
+    expect(moonButton.hidden).toBeFalsy()
   })
 
   it('<LanguageButton /> should change language when click', () => {

@@ -4,14 +4,24 @@ import { IoLanguage, IoLogoGithub } from 'react-icons/io5'
 import { useDark } from '@hooks'
 import { useTranslation } from 'react-i18next'
 import './FooterButtons.css'
+import classNames from 'classnames'
 
 export const DarkModeButton: FC = () => {
   const { isDark, toggleDark } = useDark()
 
-  return isDark ? (
-    <BiMoon data-testid="dark-button" onClick={toggleDark} className="footer-button" />
-  ) : (
-    <BiSun data-testid="dark-button" onClick={toggleDark} className="footer-button" />
+  return (
+    <>
+      <BiMoon
+        data-testid="moon-button"
+        onClick={toggleDark}
+        className={classNames('footer-button', { hidden: !isDark })}
+      />
+      <BiSun
+        data-testid="sun-button"
+        onClick={toggleDark}
+        className={classNames('footer-button', { hidden: isDark })}
+      />
+    </>
   )
 }
 

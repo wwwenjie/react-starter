@@ -6,7 +6,7 @@ export const Landing: FC = () => (
   <div className="h-screen flex flex-col items-center justify-center">
     <Logo />
     <Description />
-    <FooterButtonGroup className="my-2 flex flex-row" />
+    <FooterButtonGroup />
     <LinkGroup />
   </div>
 )

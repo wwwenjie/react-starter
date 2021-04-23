@@ -1,5 +1,6 @@
 {
   "desc": "Opinionated React Starter Template",
   "learn": "Learn",
-  "docs": "Docs"
+  "docs": "Docs",
+  "notFound": "Sorry, the page you visited does not exist."
 }

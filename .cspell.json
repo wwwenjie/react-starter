@@ -5,7 +5,8 @@
   "words": [
     "vite",
     "testid",
-    "svgr"
+    "svgr",
+    "deduping"
   ],
   "flagWords": [],
   "ignorePaths": [

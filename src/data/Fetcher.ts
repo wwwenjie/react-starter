@@ -1,8 +1,7 @@
 import axios from 'axios'
 
 export const fetcher = axios.create({
-  // baseURL: 'https://mockend.com/wwwenjie/react-starter/',
-  baseURL: 'https://jsonplaceholder.typicode.com/',
+  baseURL: import.meta.env.VITE_API_BASE_URL,
   headers: {
     Accept: 'application/json',
     'Content-type': 'application/json',

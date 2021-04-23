@@ -1,8 +1,3 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-/*todo: move to style folder*/
 html {
     background: #282c34;
 }

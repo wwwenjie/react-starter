@@ -1,9 +1,9 @@
 import React, { FC } from 'react'
+import './style.css'
 import { BiSun, BiMoon } from 'react-icons/bi'
 import { IoLanguage, IoLogoGithub } from 'react-icons/io5'
 import { useDark } from '@hooks'
 import { useTranslation } from 'react-i18next'
-import './FooterButtons.css'
 import classNames from 'classnames'
 
 export const DarkModeButton: FC = () => {

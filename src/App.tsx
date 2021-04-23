@@ -2,20 +2,24 @@ import React, { FC } from 'react'
 import AppRouter from '@AppRouter'
 import { SWRConfig as SWRConfigProvider } from 'swr'
 import { get } from '@data'
+import { I18nextProvider } from 'react-i18next'
+import i18n from '@locales/i18n'
 
 const App: FC = () => (
-  <SWRConfigProvider
-    // https://swr.vercel.app/docs/global-configuration
-    value={{
-      fetcher: get,
-      shouldRetryOnError: false,
-      revalidateOnFocus: false,
-    }}
-  >
-    <div className="app-body">
-      <AppRouter />
-    </div>
-  </SWRConfigProvider>
+  <I18nextProvider i18n={i18n}>
+    <SWRConfigProvider
+      // https://swr.vercel.app/docs/global-configuration
+      value={{
+        fetcher: get,
+        shouldRetryOnError: false,
+        revalidateOnFocus: import.meta.env.PROD,
+      }}
+    >
+      <div className="app-body">
+        <AppRouter />
+      </div>
+    </SWRConfigProvider>
+  </I18nextProvider>
 )
 
 export default App

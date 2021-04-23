@@ -1,2 +1,2 @@
-export * from './Featcher'
+export * from './Fetcher'
 export * from './Post'

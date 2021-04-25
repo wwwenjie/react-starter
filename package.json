@@ -8,6 +8,7 @@
     "dev": "vite --open",
     "build": "tsc && vite build",
     "serve": "vite preview",
+    "prepare": "husky install",
     "test": "run-s test:*",
     "test:lint": "eslint src --ext .ts,.tsx",
     "test:prettier": "prettier \"**/*.{ts,tsx,md,html,json}\" --list-different",
@@ -18,7 +19,7 @@
     "watch:test": "jest --watch",
     "cov": "run-s test:unit && open-cli coverage/lcov-report/index.html",
     "fix": "run-s fix:*",
-    "fix:prettier": "prettier \"src/**/*.ts\" --write",
+    "fix:prettier": "prettier \"**/*.{ts,tsx,md,html,json}\" --write",
     "fix:lint": "eslint src --ext .ts,.tsx --fix"
   },
   "dependencies": {

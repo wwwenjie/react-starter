@@ -3,8 +3,10 @@ import { usePosts } from '@data'
 import { Button } from '@components/atoms'
 import { useHistory } from 'react-router-dom'
 import { FooterButtonGroup, PostCard } from '@components/molecules'
+import { useTranslation } from 'react-i18next'
 
 export const Post: FC = () => {
+  const { t } = useTranslation()
   const { data: posts, loading, error } = usePosts()
   const history = useHistory()
 
@@ -23,7 +25,7 @@ export const Post: FC = () => {
         ))}
       </div>
       <Button className="my-4" onClick={handleBackClick}>
-        Go Back
+        {t('goBack')}
       </Button>
       <FooterButtonGroup />
     </div>

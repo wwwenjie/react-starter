@@ -2,5 +2,7 @@
   "desc": "固执己见的 React 起手式模版",
   "learn": "学习",
   "docs": "文档",
+  "goBack": "返回",
+  "dataFetchingExample": "数据获取示例",
   "notFound": "抱歉，您访问的页面不存在"
 }

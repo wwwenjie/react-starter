@@ -11,7 +11,7 @@
     "prepare": "husky install",
     "test": "run-s test:*",
     "test:lint": "eslint src --ext .ts,.tsx",
-    "test:prettier": "prettier \"**/*.{ts,tsx,md,html,json}\" --list-different",
+    "test:prettier": "prettier \"**/*.{ts,tsx,md,css,html,json}\" --list-different",
     "test:spelling": "cspell \"{README.md,.github/*.md,src/**/**}\"",
     "test:build": "run-p build",
     "test:unit": "jest --collectCoverage",
@@ -19,7 +19,7 @@
     "watch:test": "jest --watch",
     "cov": "run-s test:unit && open-cli coverage/lcov-report/index.html",
     "fix": "run-s fix:*",
-    "fix:prettier": "prettier \"**/*.{ts,tsx,md,html,json}\" --write",
+    "fix:prettier": "prettier \"**/*.{ts,tsx,md,css,html,json}\" --write",
     "fix:lint": "eslint src --ext .ts,.tsx --fix"
   },
   "dependencies": {
@@ -67,6 +67,8 @@
     "open-cli": "^6.0.1",
     "postcss": "^8.2.10",
     "prettier": "^2.2.1",
+    "stylelint": "^13.13.0",
+    "stylelint-config-prettier": "^8.0.2",
     "tailwindcss": "^2.1.1",
     "ts-jest": "^26.5.4",
     "typescript": "^4.1.2",

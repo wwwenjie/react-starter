@@ -10,7 +10,7 @@
     "serve": "vite preview",
     "test": "run-s test:*",
     "test:lint": "eslint src --ext .ts,.tsx",
-    "test:prettier": "prettier \"src/**/*.ts\" --list-different",
+    "test:prettier": "prettier \"**/*.{ts,tsx,md,html,json}\" --list-different",
     "test:spelling": "cspell \"{README.md,.github/*.md,src/**/**}\"",
     "test:build": "run-p build",
     "test:unit": "jest --collectCoverage",

@@ -12,6 +12,7 @@ const App: FC = () => (
       value={{
         fetcher: get,
         shouldRetryOnError: false,
+        // fixme: track https://github.com/kulshekhar/ts-jest/issues/1709
         revalidateOnFocus: import.meta.env.PROD,
       }}
     >

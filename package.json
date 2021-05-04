@@ -12,6 +12,7 @@
     "test": "run-s test:*",
     "test:lint": "eslint src --ext .ts,.tsx",
     "test:prettier": "prettier \"**/*.{ts,tsx,md,css,html,json}\" --list-different",
+    "test:css": "stylelint \"**/*.css\"",
     "test:spelling": "cspell \"{README.md,.github/*.md,src/**/**}\"",
     "test:build": "run-p build",
     "test:unit": "jest --collectCoverage",

@@ -26,7 +26,7 @@ export const Post: FC = () => {
         ))}
       </div>
       <div className={classNames('mt-4', { hidden: loading })}>{t('requestCacheInfo')}</div>
-      <div>
+      <div className={classNames({ hidden: loading })}>
         <Trans i18nKey="learnMore" components={{ docs: <Link href="https://swr.vercel.app" /> }} />
       </div>
       <Button className="my-4" onClick={handleBackClick}>

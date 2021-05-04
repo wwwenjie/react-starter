@@ -1,9 +1,10 @@
 import React, { FC } from 'react'
 import { usePosts } from '@data'
-import { Button } from '@components/atoms'
+import { Button, Link } from '@components/atoms'
 import { useHistory } from 'react-router-dom'
 import { FooterButtonGroup, PostCard } from '@components/molecules'
-import { useTranslation } from 'react-i18next'
+import { Trans, useTranslation } from 'react-i18next'
+import classNames from 'classnames'
 
 export const Post: FC = () => {
   const { t } = useTranslation()
@@ -19,10 +20,14 @@ export const Post: FC = () => {
       {loading && <div>Loading...</div>}
       {/* usually error could be handle in axios like show a message, but feel free if you want to add error display when request error */}
       {error && <div>Error</div>}
-      <div className="w-full px-4 sm:px-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {posts?.map((post) => (
           <PostCard key={post.title} post={post} />
         ))}
+      </div>
+      <div className={classNames('mt-4', { hidden: loading })}>{t('requestCacheInfo')}</div>
+      <div>
+        <Trans i18nKey="learnMore" components={{ docs: <Link href="https://swr.vercel.app" /> }} />
       </div>
       <Button className="my-4" onClick={handleBackClick}>
         {t('goBack')}

@@ -1,0 +1,3 @@
+.footer-button {
+  @apply mx-2 hover:text-react dark:hover:text-react-dark cursor-pointer;
+}

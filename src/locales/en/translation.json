@@ -2,5 +2,9 @@
   "desc": "Opinionated React Starter Template",
   "learn": "Learn",
   "docs": "Docs",
+  "goBack": "Go Back",
+  "dataFetchingExample": "Data fetching example",
+  "requestCacheInfo": "Aha, this request has cached, try to back and enter again to see cache result.",
+  "learnMore": "Learn more about it at <docs>SWR Docs</docs>",
   "notFound": "Sorry, the page you visited does not exist."
 }

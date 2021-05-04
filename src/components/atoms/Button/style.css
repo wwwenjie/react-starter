@@ -1,0 +1,6 @@
+.btn {
+  @apply inline-flex items-center px-4 py-1 rounded text-white
+  bg-react dark:bg-react-dark
+  hover:bg-react-dark dark:hover:bg-react
+  disabled:cursor-not-allowed disabled:bg-gray-600 disabled:opacity-50;
+}

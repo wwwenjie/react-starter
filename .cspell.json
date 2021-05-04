@@ -2,18 +2,7 @@
   "version": "0.1",
   "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/master/cspell.schema.json",
   "language": "en",
-  "words": [
-    "vite",
-    "testid",
-    "svgr",
-    "deduping"
-  ],
+  "words": ["vite", "testid", "svgr", "deduping"],
   "flagWords": [],
-  "ignorePaths": [
-    "package.json",
-    "yarn.lock",
-    "tsconfig.json",
-    "node_modules/**",
-    "src/public/**"
-  ]
+  "ignorePaths": ["package.json", "yarn.lock", "tsconfig.json", "node_modules/**", "src/public/**"]
 }

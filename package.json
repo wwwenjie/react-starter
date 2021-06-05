@@ -21,7 +21,8 @@
     "cov": "run-s test:unit && open-cli coverage/lcov-report/index.html",
     "fix": "run-s fix:*",
     "fix:prettier": "prettier \"**/*.{ts,tsx,md,css,html,json}\" --write",
-    "fix:lint": "eslint src --ext .ts,.tsx --fix"
+    "fix:lint": "eslint src --ext .ts,.tsx --fix",
+    "release": "standard-version"
   },
   "dependencies": {
     "axios": "^0.21.1",
@@ -68,6 +69,7 @@
     "open-cli": "^6.0.1",
     "postcss": "^8.2.10",
     "prettier": "^2.2.1",
+    "standard-version": "^9.3.0",
     "stylelint": "^13.13.0",
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-config-standard": "^22.0.0",

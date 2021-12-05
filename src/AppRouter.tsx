@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 import { BrowserRouter as Router, Navigate, Route, Routes } from 'react-router-dom'
-import { Landing, NotFound, Post } from '@pages'
+import { Landing, NotFound, Hitokoto } from '@pages'
 
 const AppRouter: FC = () => (
   <Router>
@@ -9,7 +9,7 @@ const AppRouter: FC = () => (
 
       <Route path="/landing" element={<Landing />} />
 
-      <Route path="/post" element={<Post />} />
+      <Route path="/hitokoto" element={<Hitokoto />} />
 
       <Route path="*" element={<NotFound />} />
     </Routes>

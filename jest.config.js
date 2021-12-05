@@ -11,7 +11,7 @@ module.exports = {
     '^@assets(.*?)$': '<rootDir>/src/assets/$1',
     '^@components(.*?)$': '<rootDir>/src/components/$1',
     '^@constants(.*?)$': '<rootDir>/src/constants/$1',
-    '^@data(.*?)$': '<rootDir>/src/data/$1',
+    '^@api(.*?)$': '<rootDir>/src/api/$1',
     '^@hooks(.*?)$': '<rootDir>/src/hooks/$1',
     '^@interface(.*?)$': '<rootDir>/src/interface/$1',
     '^@locales(.*?)$': '<rootDir>/src/locales/$1',

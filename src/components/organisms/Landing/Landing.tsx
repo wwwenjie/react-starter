@@ -9,7 +9,7 @@ export const Landing: FC = () => {
   const navigate = useNavigate()
 
   const handleDataButtonClick = () => {
-    navigate('/post')
+    navigate('/hitokoto')
   }
 
   return (

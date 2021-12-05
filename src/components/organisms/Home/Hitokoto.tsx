@@ -1,14 +1,14 @@
 import React, { FC } from 'react'
-import { usePosts } from '@data'
+import { useHitokoto } from '@api'
 import { Button, Link } from '@components/atoms'
 import { useNavigate } from 'react-router-dom'
-import { FooterButtonGroup, PostCard } from '@components/molecules'
+import { FooterButtonGroup, HitokotoCard } from '@components/molecules'
 import { Trans, useTranslation } from 'react-i18next'
 import classNames from 'classnames'
 
-export const Post: FC = () => {
+export const Hitokoto: FC = () => {
   const { t } = useTranslation()
-  const { data: posts, loading, error } = usePosts()
+  const { data: hitokoto, loading, error } = useHitokoto()
   const navigate = useNavigate()
 
   const handleBackClick = () => {
@@ -20,10 +20,8 @@ export const Post: FC = () => {
       {loading && <div>Loading...</div>}
       {/* usually error could be handle in axios like show a message, but feel free if you want to add error display when request error */}
       {error && <div>Error</div>}
-      <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-        {posts?.map((post) => (
-          <PostCard key={post.title} post={post} />
-        ))}
+      <div className={classNames('w-full lg:w-[70vw] xl:w-[50vw]', { hidden: loading })}>
+        <HitokotoCard hitokoto={hitokoto} />
       </div>
       <div className={classNames('mt-4', { hidden: loading })}>{t('requestCacheInfo')}</div>
       <div className={classNames({ hidden: loading })}>

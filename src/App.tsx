@@ -1,7 +1,7 @@
 import React, { FC } from 'react'
 import AppRouter from '@AppRouter'
 import { SWRConfig as SWRConfigProvider } from 'swr'
-import { get } from '@data'
+import { get } from '@api'
 import { I18nextProvider } from 'react-i18next'
 import i18n from '@locales/i18n'
 

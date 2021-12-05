@@ -1,1 +1,1 @@
-export { Post as PostOrganisms } from './Post'
+export { Hitokoto as HitokotoOrganisms } from './Hitokoto'

@@ -1,7 +1,7 @@
 import React, { FC } from 'react'
 import { usePosts } from '@data'
 import { Button, Link } from '@components/atoms'
-import { useHistory } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { FooterButtonGroup, PostCard } from '@components/molecules'
 import { Trans, useTranslation } from 'react-i18next'
 import classNames from 'classnames'
@@ -9,10 +9,10 @@ import classNames from 'classnames'
 export const Post: FC = () => {
   const { t } = useTranslation()
   const { data: posts, loading, error } = usePosts()
-  const history = useHistory()
+  const navigate = useNavigate()
 
   const handleBackClick = () => {
-    history.goBack()
+    navigate(-1)
   }
 
   return (

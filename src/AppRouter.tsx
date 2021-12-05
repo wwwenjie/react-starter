@@ -1,18 +1,18 @@
-import React from 'react'
-import { BrowserRouter as Router, Redirect, Route, Switch } from 'react-router-dom'
+import React, { FC } from 'react'
+import { BrowserRouter as Router, Navigate, Route, Routes } from 'react-router-dom'
 import { Landing, NotFound, Post } from '@pages'
 
-const AppRouter: React.FC = () => (
+const AppRouter: FC = () => (
   <Router>
-    <Switch>
-      <Route exact path="/" render={() => <Redirect to="/landing" />} />
+    <Routes>
+      <Route path="/" element={<Navigate to="/landing" />} />
 
-      <Route exact path="/landing" render={() => <Landing />} />
+      <Route path="/landing" element={<Landing />} />
 
-      <Route exact path="/post" render={() => <Post />} />
+      <Route path="/post" element={<Post />} />
 
-      <Route path="*" render={() => <NotFound />} />
-    </Switch>
+      <Route path="*" element={<NotFound />} />
+    </Routes>
   </Router>
 )
 

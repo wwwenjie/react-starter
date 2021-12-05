@@ -1,15 +1,15 @@
 import React, { FC } from 'react'
 import { Button, Description, Logo } from '@components/atoms'
 import { FooterButtonGroup, LinkGroup } from '@components/molecules'
-import { useHistory } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 
 export const Landing: FC = () => {
   const { t } = useTranslation()
-  const history = useHistory()
+  const navigate = useNavigate()
 
   const handleDataButtonClick = () => {
-    history.push('post')
+    navigate('/post')
   }
 
   return (

@@ -1,3 +1,3 @@
-import { useMedia } from 'react-use'
+import { useMediaMatch } from 'rooks'
 
-export const usePrefersDarkMode = () => useMedia('(prefers-color-scheme: dark)', false)
+export const usePrefersDarkMode = () => useMediaMatch('(prefers-color-scheme: dark)')

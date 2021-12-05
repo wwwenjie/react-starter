@@ -22,6 +22,5 @@ const App: FC = () => (
     </SWRConfigProvider>
   </I18nextProvider>
 )
-//
 
 export default App

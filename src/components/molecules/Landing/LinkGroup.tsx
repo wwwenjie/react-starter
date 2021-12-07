@@ -7,7 +7,7 @@ export const LinkGroup: FC = () => {
 
   return (
     <p>
-      <Link href="https://reactjs.org">{t('learn')} React</Link>
+      <Link href="https://beta.reactjs.org/">{t('learn')} React</Link>
       {' | '}
       <Link href="https://vitejs.dev/guide/features.html">Vite {t('docs')}</Link>
       {' | '}

@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/wwwenjie/react-starter/compare/v1.0.0...v1.1.0) (2021-12-07)
+
+
+### Features
+
+* change api demo to hitokoto ([096a9cd](https://github.com/wwwenjie/react-starter/commit/096a9cd43e6b2192860c3189ebd88886c6056b75))
+* use beta react docs ([3f41abe](https://github.com/wwwenjie/react-starter/commit/3f41abeaac030649fee50c9d867221112f09a74e))
+
 ## 1.0.0 (2021-06-05)
 
 

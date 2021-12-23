@@ -1,9 +1,10 @@
 {
   "env": {
-    "jest": true
+    "jest": true,
+    "browser": true,
+    "es2021": true
   },
   "extends": [
-    "react-app",
     "plugin:react/recommended",
     "plugin:react-hooks/recommended",
     "plugin:prettier/recommended",

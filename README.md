@@ -24,10 +24,18 @@ Personal Opinionated React Starter Template
 
 ## Running the project
 
+This project use `pnpm` as package manager, [install it](https://pnpm.io/installation) if you haven't installed.
+
+You need to install dependencies before running project at first time
+
+```shell
+pnpm i
+```
+
 You can run the project by following scripts:
 
 ```shell
-yarn dev
+pnpm dev
 ```
 
 ## Develop
@@ -41,7 +49,7 @@ Follow Atom Design will make structure clearer, you can have a try.
 
 ## Running the tests
 
-It's recommended to use TDD to develop. You can run `yarn watch:test` to start a watching test. When you add/edit common
+It's recommended to use TDD to develop. You can run `pnpm watch:test` to start a watching test. When you add/edit common
 components, it is recommended to write tests for them.
 
 ## CI/CD
@@ -55,7 +63,7 @@ this [page](https://github.blog/changelog/2021-02-08-github-actions-skip-pull-re
 ## Release
 
 This project use [standard-version](https://github.com/conventional-changelog/standard-version) to manage release,
-run `yarn release` will create new version with tag.
+run `pnpm release` will create new version with tag.
 
 ## Rules
 

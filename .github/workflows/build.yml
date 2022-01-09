@@ -1,5 +1,4 @@
-# run tests on every push
-name: test
+name: Build
 
 on:
   push:

@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 import './style.css'
-import { BiSun, BiMoon } from 'react-icons/bi'
+import { BiMoon, BiSun } from 'react-icons/bi'
 import { IoLanguage, IoLogoGithub } from 'react-icons/io5'
 import { useDark } from '@hooks'
 import { useTranslation } from 'react-i18next'
@@ -11,16 +11,8 @@ export const DarkModeButton: FC = () => {
 
   return (
     <>
-      <BiMoon
-        data-testid="moon-button"
-        onClick={toggleDark}
-        className={classNames('footer-button', { hidden: !isDark })}
-      />
-      <BiSun
-        data-testid="sun-button"
-        onClick={toggleDark}
-        className={classNames('footer-button', { hidden: isDark })}
-      />
+      <BiMoon onClick={toggleDark} className={classNames('footer-button', { hidden: !isDark })} />
+      <BiSun onClick={toggleDark} className={classNames('footer-button', { hidden: isDark })} />
     </>
   )
 }
@@ -33,13 +25,7 @@ export const LanguageButton: FC = () => {
     await i18n.changeLanguage(locales[(locales.indexOf(i18n.language) + 1) % locales.length])
   }
 
-  return (
-    <IoLanguage
-      data-testid="language-button"
-      onClick={handleLanguageClick}
-      className="footer-button"
-    />
-  )
+  return <IoLanguage onClick={handleLanguageClick} className="footer-button" />
 }
 
 export const GitHubButton: FC = () => {
@@ -47,11 +33,5 @@ export const GitHubButton: FC = () => {
     window.open('https://github.com/wwwenjie/react-starter', '_blank')
   }
 
-  return (
-    <IoLogoGithub
-      data-testid="github-button"
-      onClick={handleGitHubClick}
-      className="footer-button"
-    />
-  )
+  return <IoLogoGithub onClick={handleGitHubClick} className="footer-button" />
 }

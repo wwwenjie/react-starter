@@ -6,7 +6,7 @@
       "@*": ["src/*"]
     },
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
-    "types": ["vite/client", "jest"],
+    "types": ["vite/client"],
     "allowJs": false,
     "skipLibCheck": false,
     "esModuleInterop": true,
@@ -20,5 +20,5 @@
     "noEmit": true,
     "jsx": "react"
   },
-  "include": ["./src", "./jest-setup.ts"]
+  "include": ["./src"]
 }

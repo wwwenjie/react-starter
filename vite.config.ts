@@ -1,3 +1,4 @@
+/// <reference types="vitest" />
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import tsconfigPaths from 'vite-tsconfig-paths'
@@ -12,4 +13,10 @@ export default defineConfig({
     svgr(),
     visualizer({ filename: 'node_modules/.visualizer/stats.html' }),
   ],
+  test: {
+    environment: 'jsdom',
+    coverage: {
+      reporter: ['text', 'json', 'html'],
+    },
+  },
 })

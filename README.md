@@ -8,6 +8,8 @@ Personal Opinionated React Starter Template
 
 - [Vite](https://vitejs.dev/)
 
+- [Vitest](https://vitest.dev/)
+
 - [SWR](https://swr.vercel.app/)
 
 - [Tailwind](https://tailwindcss.com/)
@@ -17,8 +19,6 @@ Personal Opinionated React Starter Template
 - I18n ready via [react-i18next](https://react.i18next.com/)
 
 - ESLint, Prettier and stylelint. Pre-check with Husky and lint-staged.
-
-- Unit testing with Jest
 
 - CI/CD via GitHub Actions
 

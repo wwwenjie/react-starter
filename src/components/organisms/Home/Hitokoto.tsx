@@ -4,7 +4,7 @@ import { Button, Link } from '@components/atoms'
 import { useNavigate } from 'react-router-dom'
 import { FooterButtonGroup, HitokotoCard } from '@components/molecules'
 import { Trans, useTranslation } from 'react-i18next'
-import classNames from 'classnames'
+import cls from 'classnames'
 
 export const Hitokoto: FC = () => {
   const { t } = useTranslation()
@@ -20,11 +20,11 @@ export const Hitokoto: FC = () => {
       {loading && <div>Loading...</div>}
       {/* usually error could be handle in axios like show a message, but feel free if you want to add error display when request error */}
       {error && <div>Error</div>}
-      <div className={classNames('w-full lg:w-[70vw] xl:w-[50vw]', { hidden: loading })}>
+      <div className={cls('w-full lg:w-[70vw] xl:w-[50vw]', { hidden: loading })}>
         <HitokotoCard hitokoto={hitokoto} />
       </div>
-      <div className={classNames('mt-4', { hidden: loading })}>{t('requestCacheInfo')}</div>
-      <div className={classNames({ hidden: loading })}>
+      <div className={cls('mt-4', { hidden: loading })}>{t('requestCacheInfo')}</div>
+      <div className={cls({ hidden: loading })}>
         <Trans i18nKey="learnMore" components={{ docs: <Link href="https://swr.vercel.app" /> }} />
       </div>
       <Button className="my-4" onClick={handleBackClick}>

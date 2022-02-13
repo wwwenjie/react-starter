@@ -4,15 +4,15 @@ import { BiMoon, BiSun } from 'react-icons/bi'
 import { IoLanguage, IoLogoGithub } from 'react-icons/io5'
 import { useDark } from '@hooks'
 import { useTranslation } from 'react-i18next'
-import classNames from 'classnames'
+import cls from 'classnames'
 
 export const DarkModeButton: FC = () => {
   const { isDark, toggleDark } = useDark()
 
   return (
     <>
-      <BiMoon onClick={toggleDark} className={classNames('footer-button', { hidden: !isDark })} />
-      <BiSun onClick={toggleDark} className={classNames('footer-button', { hidden: isDark })} />
+      <BiMoon onClick={toggleDark} className={cls('footer-button', { hidden: !isDark })} />
+      <BiSun onClick={toggleDark} className={cls('footer-button', { hidden: isDark })} />
     </>
   )
 }

@@ -1,15 +1,14 @@
-import moment, { Moment } from 'moment'
+import dayjs, { ConfigType } from 'dayjs'
+import LocalizedFormat from 'dayjs/plugin/localizedFormat'
 
-export const seconds2Milliseconds = (seconds: number): number =>
-  moment.duration(seconds, 'seconds').asMilliseconds()
+dayjs.extend(LocalizedFormat)
 
-export const minutes2Milliseconds = (minutes: number): number =>
-  moment.duration(minutes, 'minutes').asMilliseconds()
+export const seconds2Milliseconds = (seconds: number): number => seconds * 1000
 
-export const hours2Milliseconds = (hours: number): number =>
-  moment.duration(hours, 'hours').asMilliseconds()
+export const minutes2Milliseconds = (minutes: number): number => minutes * 60 * 1000
 
-export const defaultDateFormat = (date: Date | Moment | string): string =>
-  moment(date).format('lll')
+export const hours2Milliseconds = (hours: number): number => hours * 60 * 60 * 1000
 
-export const simpleDateFormat = (date: Date | Moment | string): string => moment(date).format('ll')
+export const defaultDateFormat = (date: ConfigType): string => dayjs(date).format('lll')
+
+export const simpleDateFormat = (date: ConfigType): string => dayjs(date).format('ll')

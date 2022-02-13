@@ -10,12 +10,13 @@
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:functional/lite",
+    "plugin:tailwindcss/recommended",
     "airbnb-base",
     "airbnb/rules/react",
     "prettier"
   ],
   "parser": "@typescript-eslint/parser",
-  "plugins": ["react", "@typescript-eslint", "functional"],
+  "plugins": ["react", "@typescript-eslint", "functional", "tailwindcss"],
   "rules": {
     "prettier/prettier": "error",
     "no-unused-vars": "off",

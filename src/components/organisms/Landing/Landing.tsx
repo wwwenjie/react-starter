@@ -13,7 +13,7 @@ export const Landing: FC = () => {
   }
 
   return (
-    <div className="h-screen flex flex-col items-center justify-center">
+    <div className="flex flex-col justify-center items-center h-screen">
       <Logo />
       <p>{t('desc')}</p>
       <Button className="my-2" onClick={handleDataButtonClick}>

@@ -8,10 +8,12 @@ export const fetcher = axios.create({
   },
 })
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any,@typescript-eslint/no-unused-vars
 const onRequestError = async (error: any) => {
   // logic when request error
 }
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const onResponseError = async (error: any) => {
   if (error?.response?.status) {
     await onResponseStatus(error.response.status)
@@ -25,8 +27,9 @@ const onResponseStatus = async (status: number) => {
     .set(401, () => {
       // redirect to login or anything you want
     })
-    // eslint-disable-next-line @typescript-eslint/no-empty-function
-    .set(404, () => {})
+    .set(404, () => {
+      // show 404 page
+    })
 
   const func = statusMapper.get(status)
   if (func) {

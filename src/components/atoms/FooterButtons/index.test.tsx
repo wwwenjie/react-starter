@@ -1,5 +1,4 @@
 import React from 'react'
-import { afterEach, describe, expect, it } from 'vitest'
 import { fireEvent, render } from '@testing-library/react'
 import { LanguageButton } from '@components/atoms'
 import i18n from '@locales/i18n'

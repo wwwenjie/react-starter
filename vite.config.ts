@@ -14,6 +14,7 @@ export default defineConfig({
     visualizer({ filename: 'node_modules/.visualizer/stats.html' }),
   ],
   test: {
+    globals: true,
     environment: 'jsdom',
     coverage: {
       reporter: ['text', 'json', 'html'],

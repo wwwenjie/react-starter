@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/wwwenjie/react-starter/compare/v1.1.0...v1.2.0) (2022-02-13)
+
+
+### Features
+
+* add vitest ([c9eaf1e3](https://github.com/wwwenjie/react-starter/commit/c9eaf1e3a9cf30ae90cf5d89740ef66374ac66be))
+* eslint tailwind ([39d11388](https://github.com/wwwenjie/react-starter/commit/39d11388d01e113ef4b826aabd8405181c33a4be))
+
 ## [1.1.0](https://github.com/wwwenjie/react-starter/compare/v1.0.0...v1.1.0) (2021-12-07)
 
 

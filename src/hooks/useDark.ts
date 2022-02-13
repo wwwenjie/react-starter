@@ -1,12 +1,11 @@
 import { useEffect } from 'react'
-import { useLocalstorage } from 'rooks'
-import { usePrefersDarkMode } from './usePreferredDark'
+import { useLocalstorage, useMediaMatch } from 'rooks'
 
 export declare type ColorScheme = 'dark' | 'light' | 'auto'
 
 export const useDark = (key = 'color-scheme', defaultColorScheme: ColorScheme = 'auto') => {
   const [colorScheme, setColorScheme] = useLocalstorage(key, defaultColorScheme)
-  const prefersDarkMode = usePrefersDarkMode()
+  const prefersDarkMode = useMediaMatch('(prefers-color-scheme: dark)')
   const isDark = colorScheme === 'auto' ? prefersDarkMode : colorScheme === 'dark'
 
   useEffect(() => {

@@ -20,6 +20,8 @@ Personal Opinionated React Starter Template
 
 - CI/CD via GitHub Actions
 
+- Ant design [integration](https://github.com/wwwenjie/react-starter/tree/antd)
+
 ## Running the project
 
 This project use `pnpm` as package manager, [install it](https://pnpm.io/installation) if you haven't installed.

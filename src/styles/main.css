@@ -6,6 +6,6 @@ html.dark {
   background: #000;
 }
 
-.app-body {
+body {
   @apply font-sans bg-[#282c34] dark:bg-black text-white dark:text-gray-400;
 }

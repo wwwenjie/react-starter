@@ -15,9 +15,7 @@ const App: FC = () => (
         revalidateOnFocus: import.meta.env.PROD,
       }}
     >
-      <div className="app-body">
-        <AppRouter />
-      </div>
+      <AppRouter />
     </SWRConfigProvider>
   </I18nextProvider>
 )

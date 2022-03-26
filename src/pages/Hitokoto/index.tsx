@@ -23,9 +23,8 @@ export const Hitokoto: FC = () => {
       <div className={cls({ hidden: loading })}>
         <Trans i18nKey="learnMore" components={{ docs: <Link href="https://swr.vercel.app" /> }} />
       </div>
-      <div className="flex gap-2">
+      <div className="flex gap-2 my-4">
         <Button
-          className="my-4"
           onClick={() => {
             mutate()
           }}
@@ -33,7 +32,6 @@ export const Hitokoto: FC = () => {
           {t('refresh')}
         </Button>
         <Button
-          className="my-4"
           onClick={() => {
             navigate(-1)
           }}

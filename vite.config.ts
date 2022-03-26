@@ -13,6 +13,18 @@ export default defineConfig({
     svgr(),
     visualizer({ filename: 'node_modules/.visualizer/stats.html' }),
   ],
+  css: {
+    preprocessorOptions: {
+      less: {
+        javascriptEnabled: true,
+        modifyVars: {
+          'primary-color': '#61dafb',
+          'link-color': '#61dafb',
+          'border-radius-base': '0.25rem',
+        },
+      },
+    },
+  },
   test: {
     globals: true,
     environment: 'jsdom',

@@ -8,12 +8,8 @@ import { HitokotoCard } from './HitokotoCard'
 
 export const Hitokoto: FC = () => {
   const { t } = useTranslation()
-  const { data: hitokoto, loading, error } = useHitokoto()
+  const { data: hitokoto, loading, error, mutate } = useHitokoto()
   const navigate = useNavigate()
-
-  const handleBackClick = () => {
-    navigate(-1)
-  }
 
   return (
     <div className="flex flex-col justify-center items-center m-4 md:m-12 lg:m-24">
@@ -27,9 +23,24 @@ export const Hitokoto: FC = () => {
       <div className={cls({ hidden: loading })}>
         <Trans i18nKey="learnMore" components={{ docs: <Link href="https://swr.vercel.app" /> }} />
       </div>
-      <Button className="my-4" onClick={handleBackClick}>
-        {t('goBack')}
-      </Button>
+      <div className="flex gap-2">
+        <Button
+          className="my-4"
+          onClick={() => {
+            mutate()
+          }}
+        >
+          {t('refresh')}
+        </Button>
+        <Button
+          className="my-4"
+          onClick={() => {
+            navigate(-1)
+          }}
+        >
+          {t('goBack')}
+        </Button>
+      </div>
       <FooterButtonGroup />
     </div>
   )

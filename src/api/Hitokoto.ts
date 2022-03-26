@@ -9,13 +9,14 @@ export type Hitokoto = {
 }
 
 export const useHitokoto = () => {
-  const { data, error, isValidating } = useSWR<Hitokoto>('/', {
+  const { data, error, isValidating, mutate } = useSWR<Hitokoto>('/', {
     dedupingInterval: minutes2Milliseconds(1),
   })
 
   return {
     data,
-    loading: isValidating,
     error,
+    loading: isValidating,
+    mutate,
   }
 }

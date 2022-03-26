@@ -3,6 +3,7 @@
   "learn": "学习",
   "docs": "文档",
   "goBack": "返回",
+  "refresh": "刷新",
   "dataFetchingExample": "数据获取示例",
   "requestCacheInfo": "啊哈，这个请求已缓存，试试返回再次进入查看缓存结果",
   "learnMore": "在 <docs>SWR 文档</docs> 上了解更多",

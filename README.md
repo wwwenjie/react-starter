@@ -14,8 +14,6 @@ Personal Opinionated React Starter Template
 
 - [Tailwind](https://tailwindcss.com/)
 
-- [Atom Design](https://atomicdesign.bradfrost.com/table-of-contents/)
-
 - I18n ready via [react-i18next](https://react.i18next.com/)
 
 - ESLint, Prettier and stylelint. Pre-check with Husky and lint-staged.
@@ -44,8 +42,6 @@ We use React **^17** and Vite **^2**. If you are looking for any 3rd party lib, 
 
 Redux or other state library are not recommended unless you are going to build a complex project. For simple or middle
 project, consider using SWR and localstorage.
-
-Follow Atom Design will make structure clearer, you can have a try.
 
 ## Running the tests
 

@@ -1,1 +1,0 @@
-export { HitokotoCard } from './HitokotoCard'

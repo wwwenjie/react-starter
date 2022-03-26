@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
-import { DarkModeButton, GitHubButton, LanguageButton } from '@components/atoms'
 import cls from 'classnames'
+import { DarkModeButton, GitHubButton, LanguageButton } from './FooterButtons'
 
 export const FooterButtonGroup: FC<React.HTMLAttributes<HTMLDivElement>> = ({
   className,

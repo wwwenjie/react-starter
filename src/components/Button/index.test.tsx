@@ -1,6 +1,6 @@
 import React from 'react'
 import { render } from '@testing-library/react'
-import { Button } from '@components/atoms'
+import { Button } from '@components'
 
 describe('<Button />', () => {
   it('should have show loading icon when loading is true', () => {

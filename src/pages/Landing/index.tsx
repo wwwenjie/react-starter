@@ -1,6 +1,5 @@
 import React, { FC } from 'react'
-import { Button, Logo } from '@components/atoms'
-import { FooterButtonGroup, LinkGroup } from '@components/molecules'
+import { Button, FooterButtonGroup, Link, Logo } from '@components'
 import { useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 
@@ -20,7 +19,13 @@ export const Landing: FC = () => {
         {t('dataFetchingExample')}
       </Button>
       <FooterButtonGroup />
-      <LinkGroup />
+      <p>
+        <Link href="https://beta.reactjs.org/">{t('learn')} React</Link>
+        {' | '}
+        <Link href="https://vitejs.dev/guide/features.html">Vite {t('docs')}</Link>
+        {' | '}
+        <Link href="https://tailwindcss.com/docs">Tailwind {t('docs')}</Link>
+      </p>
     </div>
   )
 }

@@ -1,10 +1,10 @@
 import React, { FC } from 'react'
 import { useHitokoto } from '@api'
-import { Button, Link } from '@components/atoms'
+import { Button, FooterButtonGroup, Link } from '@components'
 import { useNavigate } from 'react-router-dom'
-import { FooterButtonGroup, HitokotoCard } from '@components/molecules'
 import { Trans, useTranslation } from 'react-i18next'
 import cls from 'classnames'
+import { HitokotoCard } from './HitokotoCard'
 
 export const Hitokoto: FC = () => {
   const { t } = useTranslation()

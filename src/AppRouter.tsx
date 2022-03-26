@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 import { BrowserRouter as Router, Navigate, Route, Routes } from 'react-router-dom'
-import { Landing, NotFound, Hitokoto } from '@pages'
+import { Hitokoto, Landing, NotFound } from '@pages'
 
 const AppRouter: FC = () => (
   <Router>

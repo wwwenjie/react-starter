@@ -8,7 +8,7 @@ import { HitokotoCard } from './HitokotoCard'
 
 export const Hitokoto: FC = () => {
   const { t } = useTranslation()
-  const { data: hitokoto, loading, error, mutate } = useHitokoto()
+  const { data: hitokoto, isValidating: loading, error, mutate } = useHitokoto()
   const navigate = useNavigate()
 
   return (

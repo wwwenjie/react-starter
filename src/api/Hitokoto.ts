@@ -8,15 +8,7 @@ export type Hitokoto = {
   readonly from_who: string
 }
 
-export const useHitokoto = () => {
-  const { data, error, isValidating, mutate } = useSWR<Hitokoto>('/', {
+export const useHitokoto = () =>
+  useSWR<Hitokoto>('https://v1.hitokoto.cn', {
     dedupingInterval: minutes2Milliseconds(1),
   })
-
-  return {
-    data,
-    error,
-    loading: isValidating,
-    mutate,
-  }
-}

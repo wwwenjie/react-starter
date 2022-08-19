@@ -40,36 +40,34 @@ pnpm dev
 
 ## Develop
 
-We use React **^17** and Vite **^2**. If you are looking for any 3rd party lib, Please check if the version supports.
+We use React **^18** and Vite **^3**. If you are looking for any 3rd party lib, Please check if the version supports.
 
 Redux or other state library are not recommended unless you are going to build a complex project. For simple or middle
 project, consider using SWR and localstorage.
 
 ## Running the tests
 
-It's recommended to use TDD to develop. You can run `pnpm watch:test` to start a watching test. When you add/edit common
-components, it is recommended to write tests for them.
+We use vitest to run tests. You can run `pnpm watch:test` to start a watching test or run `pnpm test:unit` to run full
+unit tests. When you add/edit common components, it is recommended to write tests for them.
 
 ## CI/CD
 
-This project uses GitHub Actions to do CI and CD, you can check details in `.github/workflows`. By default, every pull
-request to develop branch will run lint and tests check, and create a review via Vercel. Every pull request to main
-branch will create a review, when it's merged to main branch it will deploy to prod.  
-To skip CI/CD, you can check
+This project uses GitHub Actions to do CI, you can check details in `.github/workflows`. To skip CI/CD, you can check
 this [page](https://github.blog/changelog/2021-02-08-github-actions-skip-pull-request-and-push-workflows-with-skip-ci/).
 
 ## Release
 
 This project use [standard-version](https://github.com/conventional-changelog/standard-version) to manage release,
-run `pnpm release` will create new version with tag.
+run `pnpm release` will create new version with tag. When tags with version pushed, a GitHub release will create.
 
 ## Rules
 
 You **have to** allow the rules below to ensure code quality
 
-- Only push code to main when all tests pass
+- Only push codes when all tests pass
 
-- Commit message should follow [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/)
+- Commit message should follow [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/).
+  Try [commit-ez](https://github.com/wwwenjie/commit-ez)
 
 ## Code Style
 
@@ -83,5 +81,3 @@ Some other code styles listed below (recommended)
 - Use the `ComponentNameProps` to name the Props and export
 
 - Use FC<Props> to type define a component
-
-- Use handle{Type}{Event} name a handle function, e.g. handleNameChange

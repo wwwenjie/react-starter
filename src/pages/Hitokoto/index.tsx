@@ -12,7 +12,7 @@ export const Hitokoto: FC = () => {
   const navigate = useNavigate()
 
   return (
-    <div className="flex flex-col justify-center items-center m-4 md:m-12 lg:m-24">
+    <div className="m-4 flex flex-col items-center justify-center md:m-12 lg:m-24">
       {loading && <div>Loading...</div>}
       {/* usually error could be handle in axios like show a message, but feel free if you want to add error display when request error */}
       {error && <div>Error</div>}

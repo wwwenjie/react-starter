@@ -9,7 +9,7 @@ export type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
 
 export const Button: FC<ButtonProps> = ({ className, loading, disabled, children, ...rest }) => (
   <button className={cls('btn', className)} disabled={loading || disabled} {...rest}>
-    {loading && <AiOutlineLoading className="mr-2 -ml-1 w-4 h-4 animate-spin" />}
+    {loading && <AiOutlineLoading className="mr-2 -ml-1 h-4 w-4 animate-spin" />}
     {children}
   </button>
 )

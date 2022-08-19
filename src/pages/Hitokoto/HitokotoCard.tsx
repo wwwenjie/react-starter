@@ -8,7 +8,7 @@ export type PostCardProps = React.HTMLAttributes<HTMLDivElement> & {
 
 export const HitokotoCard: FC<PostCardProps> = ({ hitokoto, ...rest }) => (
   <div className={cls('p-2 lg:p-8 bg-react dark:bg-react-dark rounded-lg text-white')} {...rest}>
-    <div className="flex flex-col w-full">
+    <div className="flex w-full flex-col">
       <div>{hitokoto?.hitokoto}</div>
       <div className="self-end">{hitokoto?.from}</div>
     </div>

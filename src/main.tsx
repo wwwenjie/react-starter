@@ -1,6 +1,5 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import 'antd/dist/antd.dark.less'
 import '@styles/tailwind.css'
 import '@styles/main.css'
 import App from './App'

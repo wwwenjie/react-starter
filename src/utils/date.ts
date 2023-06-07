@@ -9,6 +9,8 @@ export const minutes2Milliseconds = (minutes: number): number => minutes * 60 * 
 
 export const hours2Milliseconds = (hours: number): number => hours * 60 * 60 * 1000
 
-export const defaultDateFormat = (date: ConfigType): string => dayjs(date).format('lll')
+export const formatDate = (date: ConfigType): string =>
+  date ? dayjs(date).format('YYYY-MM-DD') : ''
 
-export const simpleDateFormat = (date: ConfigType): string => dayjs(date).format('ll')
+export const formatDateTime = (dateTime: ConfigType): string =>
+  dateTime ? dayjs(dateTime).format('YYYY-MM-DD HH:mm:ss') : ''

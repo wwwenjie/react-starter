@@ -1,7 +1,7 @@
 import React, { FC } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
-import { Logo } from '@components/Logo'
+import { ReactComponent as LogoSVG } from '@assets/logo.svg'
 import { Button } from '@components/Button'
 import { FooterButtonGroup } from '@components/FooterButtonGroup'
 import { Link } from '@components/Link'
@@ -16,7 +16,7 @@ export const Landing: FC = () => {
 
   return (
     <div className="flex h-screen flex-col items-center justify-center">
-      <Logo />
+      <LogoSVG className="pointer-events-none h-[40vmin] animate-spin-slow fill-current text-primary dark:text-primary-dark" />
       <p>{t('desc')}</p>
       <Button className="my-2" onClick={handleDataButtonClick}>
         {t('dataFetchingExample')}

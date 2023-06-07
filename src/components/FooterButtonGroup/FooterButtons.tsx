@@ -2,9 +2,9 @@ import React, { FC } from 'react'
 import './style.css'
 import { BiMoon, BiSun } from 'react-icons/bi'
 import { IoLanguage, IoLogoGithub } from 'react-icons/io5'
-import { useDark } from '@hooks/useDark'
 import { useTranslation } from 'react-i18next'
 import cls from 'classnames'
+import { useDark } from '@/hooks/useDark'
 
 export const DarkModeButton: FC = () => {
   const { isDark, toggleDark } = useDark()

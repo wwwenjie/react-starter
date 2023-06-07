@@ -1,6 +1,6 @@
-import { FooterButtonGroup } from '@components/FooterButtonGroup'
 import React, { FC } from 'react'
 import { useTranslation } from 'react-i18next'
+import { FooterButtonGroup } from '@/components/FooterButtonGroup'
 
 export const NotFound: FC = () => {
   const { t } = useTranslation()

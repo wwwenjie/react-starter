@@ -1,7 +1,7 @@
 import React from 'react'
 import { fireEvent, render } from '@testing-library/react'
-import i18n from '@locales/i18n'
 import { LanguageButton } from './FooterButtons'
+import i18n from '@/locales/i18n'
 
 describe('<FooterButtons />', () => {
   afterEach(() => {

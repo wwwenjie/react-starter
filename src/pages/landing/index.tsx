@@ -1,10 +1,10 @@
 import React, { FC } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
-import { ReactComponent as LogoSVG } from '@assets/logo.svg'
-import { Button } from '@components/Button'
-import { FooterButtonGroup } from '@components/FooterButtonGroup'
-import { Link } from '@components/Link'
+import { ReactComponent as LogoSVG } from '@/assets/logo.svg'
+import { Button } from '@/components/Button'
+import { FooterButtonGroup } from '@/components/FooterButtonGroup'
+import { Link } from '@/components/Link'
 
 export const Landing: FC = () => {
   const { t } = useTranslation()

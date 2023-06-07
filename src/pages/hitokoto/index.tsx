@@ -1,12 +1,12 @@
 import React, { FC } from 'react'
-import { useHitokoto } from '@api/hitokoto'
-import { Button } from '@components/Button'
-import { FooterButtonGroup } from '@components/FooterButtonGroup'
-import { Link } from '@components/Link'
-import { useNavigate } from 'react-router-dom'
-import { Trans, useTranslation } from 'react-i18next'
 import cls from 'classnames'
 import { Card } from 'antd'
+import { Trans, useTranslation } from 'react-i18next'
+import { useNavigate } from 'react-router-dom'
+import { useHitokoto } from '@/api/hitokoto'
+import { Button } from '@/components/Button'
+import { FooterButtonGroup } from '@/components/FooterButtonGroup'
+import { Link } from '@/components/Link'
 
 export const Hitokoto: FC = () => {
   const { t } = useTranslation()

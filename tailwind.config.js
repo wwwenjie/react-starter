@@ -1,4 +1,7 @@
-module.exports = {
+import { COLORS } from './src/constants/colors'
+
+/** @type {import('tailwindcss').Config} */
+const tailwindConfig = {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   darkMode: 'class',
   theme: {
@@ -7,13 +10,11 @@ module.exports = {
         'spin-slow': 'spin 20s linear infinite',
       },
       colors: {
-        react: '#61dafb',
-        'react-dark': '#469db1',
+        primary: COLORS.PRIMARY,
+        'primary-dark': COLORS.PRIMARY_DARK,
       },
     },
   },
-  variants: {
-    extend: {},
-  },
-  plugins: [],
 }
+
+export default tailwindConfig

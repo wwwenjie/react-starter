@@ -7,7 +7,7 @@ export type LinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
 
 export const Link: FC<LinkProps> = ({ children, href, className }) => (
   <a
-    className={cls('text-react dark:text-react-dark', className)}
+    className={cls('text-primary dark:text-primary-dark', className)}
     href={href}
     target="_blank"
     rel="noopener noreferrer"

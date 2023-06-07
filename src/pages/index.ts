@@ -1,3 +1,3 @@
-export * from './Hitokoto'
-export * from './Landing'
+export * from './hitokoto'
+export * from './landing'
 export * from './NotFound'

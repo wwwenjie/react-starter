@@ -1,7 +1,9 @@
 import React from 'react'
 import { createBrowserRouter, Navigate } from 'react-router-dom'
-import { Hitokoto, Landing, NotFound } from '@pages'
 import { ROUTE_PATHS } from '@routes/constants'
+import { Landing } from '@pages/landing'
+import { Hitokoto } from '@pages/hitokoto'
+import { NotFound } from '@pages/notFound'
 
 export const router = createBrowserRouter([
   {

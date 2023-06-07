@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 import { SWRConfig as SWRConfigProvider } from 'swr'
-import { get } from '@api'
+import { get } from '@api/fetcher'
 import { I18nextProvider } from 'react-i18next'
 import i18n from '@locales/i18n'
 import { ConfigProvider as AntConfigProvider, theme } from 'antd'

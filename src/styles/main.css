@@ -1,11 +1,3 @@
-html {
-  background: #282c34;
-}
-
-html.dark {
-  background: #000;
-}
-
 body {
-  @apply font-sans bg-[#282c34] dark:bg-black text-white dark:text-gray-400;
+  @apply font-sans bg-background dark:bg-background-dark text-text dark:text-text-dark;
 }

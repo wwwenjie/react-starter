@@ -12,6 +12,10 @@ const tailwindConfig = {
       colors: {
         primary: COLORS.PRIMARY,
         'primary-dark': COLORS.PRIMARY_DARK,
+        text: COLORS.TEXT,
+        'text-dark': COLORS.TEXT_DARK,
+        background: COLORS.BACKGROUND,
+        'background-dark': COLORS.BACKGROUND_DARK,
       },
     },
   },

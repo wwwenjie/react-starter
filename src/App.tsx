@@ -1,8 +1,9 @@
-import { ConfigProvider as AntConfigProvider, theme } from 'antd'
+import { App as AntApp, ConfigProvider as AntConfigProvider, theme } from 'antd'
 import React, { FC } from 'react'
 import { I18nextProvider } from 'react-i18next'
 import { RouterProvider } from 'react-router-dom'
 import { SWRConfig as SWRConfigProvider } from 'swr'
+import { StyleProvider } from '@ant-design/cssinjs'
 import { get } from '@/api/fetcher'
 import { COLORS } from '@/constants/colors'
 import i18n from '@/locales/i18n'
@@ -31,7 +32,11 @@ const App: FC = () => {
             },
           }}
         >
-          <RouterProvider router={router} />
+          <StyleProvider hashPriority="high">
+            <AntApp>
+              <RouterProvider router={router} />
+            </AntApp>
+          </StyleProvider>
         </AntConfigProvider>
       </SWRConfigProvider>
     </I18nextProvider>

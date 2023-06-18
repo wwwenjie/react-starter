@@ -2,6 +2,7 @@ import { COLORS } from './src/constants/colors'
 
 /** @type {import('tailwindcss').Config} */
 const tailwindConfig = {
+  important: true,
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   darkMode: 'class',
   theme: {

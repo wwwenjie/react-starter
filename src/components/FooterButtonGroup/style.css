@@ -1,3 +1,5 @@
+@reference "@/styles/tailwind.css";
+
 .footer-button {
   @apply mx-2 hover:text-primary dark:hover:text-primary-dark cursor-pointer;
 }

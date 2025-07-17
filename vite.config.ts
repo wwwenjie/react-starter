@@ -1,15 +1,14 @@
 /// <reference types="vitest" />
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
 import path from 'node:path'
-import { defineConfig } from 'vite'
+import tailwindcss from '@tailwindcss/vite'
 import react from '@vitejs/plugin-react'
-import svgr from 'vite-plugin-svgr'
 import { visualizer } from 'rollup-plugin-visualizer'
+import { defineConfig } from 'vite'
+import svgr from 'vite-plugin-svgr'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(), svgr(), visualizer({ filename: 'node_modules/.visualizer/stats.html' })],
+  plugins: [react(), tailwindcss(), svgr(), visualizer({ filename: 'node_modules/.visualizer/stats.html' })],
   resolve: {
     alias: {
       '@/': `${path.resolve(__dirname, 'src')}/`,
@@ -19,7 +18,7 @@ export default defineConfig({
     globals: true,
     environment: 'jsdom',
     coverage: {
-      provider: 'c8',
+      provider: 'v8',
       reporter: ['text', 'json', 'html'],
     },
   },

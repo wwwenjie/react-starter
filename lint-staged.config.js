@@ -1,6 +1,5 @@
-module.exports = {
-  '**/*.{ts,tsx,md,css,html,json}': 'prettier --check',
+export default {
   '**/*.css': 'stylelint',
-  'src/**/*.{ts,tsx}': 'eslint',
+  '**/*': 'eslint',
   '**/*.{ts,tsx}': () => 'tsc -p tsconfig.json',
 }

@@ -1,5 +1,5 @@
-import React, { FC } from 'react'
 import cls from 'classnames'
+import React, { FC } from 'react'
 
 export type LinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
   readonly href: string

@@ -1,6 +1,5 @@
 export const sleep = async (timeout = 2000): Promise<void> =>
-  new Promise((resolve) =>
-    // eslint-disable-next-line no-promise-executor-return
+  new Promise(resolve =>
     setTimeout(() => {
       resolve()
     }, timeout),

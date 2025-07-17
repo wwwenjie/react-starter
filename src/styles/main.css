@@ -1,3 +1,5 @@
+@reference "@/styles/tailwind.css";
+
 body {
   @apply font-sans bg-background dark:bg-background-dark text-text dark:text-text-dark;
 }

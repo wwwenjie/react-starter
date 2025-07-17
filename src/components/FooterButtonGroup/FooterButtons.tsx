@@ -1,18 +1,18 @@
+import cls from 'classnames'
 import React, { FC } from 'react'
-import './style.css'
+import { useTranslation } from 'react-i18next'
 import { BiMoon, BiSun } from 'react-icons/bi'
 import { IoLanguage, IoLogoGithub } from 'react-icons/io5'
-import { useTranslation } from 'react-i18next'
-import cls from 'classnames'
-import { useDark } from '@/hooks/useDark'
+import { useTheme } from '@/hooks/useTheme'
+import './style.css'
 
 export const DarkModeButton: FC = () => {
-  const { isDark, toggleDark } = useDark()
+  const { isDark, isLight, setThemeMode } = useTheme()
 
   return (
     <>
-      <BiMoon onClick={toggleDark} className={cls('footer-button', { hidden: !isDark })} />
-      <BiSun onClick={toggleDark} className={cls('footer-button', { hidden: isDark })} />
+      <BiMoon onClick={() => setThemeMode('dark')} className={cls('footer-button', { hidden: isDark })} />
+      <BiSun onClick={() => setThemeMode('light')} className={cls('footer-button', { hidden: isLight })} />
     </>
   )
 }

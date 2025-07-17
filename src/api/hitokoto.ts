@@ -1,7 +1,7 @@
 import useSWR from 'swr'
 import { minutes2Milliseconds } from '@/utils/date'
 
-export type Hitokoto = {
+export interface Hitokoto {
   readonly id: string
   readonly hitokoto: string
   readonly from: string

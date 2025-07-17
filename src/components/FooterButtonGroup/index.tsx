@@ -1,5 +1,5 @@
-import React, { FC } from 'react'
 import cls from 'classnames'
+import React, { FC } from 'react'
 import { DarkModeButton, GitHubButton, LanguageButton } from './FooterButtons'
 
 export const FooterButtonGroup: FC<React.HTMLAttributes<HTMLDivElement>> = ({

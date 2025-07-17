@@ -1,6 +1,6 @@
-import React, { FC } from 'react'
-import cls from 'classnames'
 import { Card } from 'antd'
+import cls from 'classnames'
+import React, { FC } from 'react'
 import { Trans, useTranslation } from 'react-i18next'
 import { useNavigate } from 'react-router-dom'
 import { useHitokoto } from '@/api/hitokoto'

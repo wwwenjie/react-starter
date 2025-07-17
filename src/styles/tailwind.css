@@ -1,3 +1,28 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@layer theme, base, antd, components, utilities;
+
+/* stylelint-disable-next-line import-notation */
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+    --color-primary: #61dafb;
+    --color-primary-dark: #469db1;
+    --color-text: #fff; 
+    --color-text-dark: #9ca3af;
+    --color-background: #282c34;
+    --color-background-dark: #000;
+}
+
+@theme {
+    /* Colors */
+    --color-primary: var(--color-primary);
+    --color-primary-dark: var(--color-primary-dark);
+    --color-text: var(--color-text);
+    --color-text-dark: var(--color-text-dark);
+    --color-background: var(--color-background);
+    --color-background-dark: var(--color-background-dark);
+    
+    /* Animation */
+    --animate-spin-slow: spin 20s linear infinite;
+}

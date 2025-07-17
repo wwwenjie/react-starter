@@ -29,6 +29,7 @@
   },
   "dependencies": {
     "@ant-design/cssinjs": "^1.23.0",
+    "@ant-design/v5-patch-for-react-19": "^1.0.3",
     "@tailwindcss/vite": "^4.1.11",
     "ahooks": "^3.9.0",
     "antd": "^5.26.5",

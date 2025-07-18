@@ -14,13 +14,13 @@ Personal Opinionated React Starter Template
 
 - [Tailwind](https://tailwindcss.com/)
 
+- [Ant Design](https://ant.design/)
+
 - I18n ready via [react-i18next](https://react.i18next.com/)
 
-- ESLint, Prettier and stylelint. Pre-check with Husky and lint-staged.
+- ESLint, Stylelint. Pre-check with Husky and lint-staged.
 
 - CI/CD via GitHub Actions
-
-- Ant design [integration](https://github.com/wwwenjie/react-starter/tree/antd)
 
 ## Running the project
 
@@ -40,7 +40,7 @@ pnpm dev
 
 ## Develop
 
-We use React **^18** and Vite **^3**. If you are looking for any 3rd party lib, Please check if the version supports.
+We use React **^19** and Vite **^7**. If you are looking for any 3rd party lib, Please check if the version supports.
 
 Redux or other state library are not recommended unless you are going to build a complex project. For simple or middle
 project, consider using SWR and localstorage.
@@ -71,8 +71,7 @@ You **have to** allow the rules below to ensure code quality
 
 ## Code Style
 
-We follow [airbnb code style](https://github.com/airbnb/javascript), but we have customized some code style in prettier,
-you can check prettier for details
+We follow [antfu eslint-config](https://github.com/antfu/eslint-config) to minimize eslint config
 
 Some other code styles listed below (recommended)
 

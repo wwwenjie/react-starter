@@ -3,16 +3,16 @@ import React, { FC } from 'react'
 import { useTranslation } from 'react-i18next'
 import { BiMoon, BiSun } from 'react-icons/bi'
 import { IoLanguage, IoLogoGithub } from 'react-icons/io5'
-import { useTheme } from '@/hooks/useTheme'
+import { useColorScheme } from '@/hooks/useColorScheme'
 import './style.css'
 
 export const DarkModeButton: FC = () => {
-  const { isDark, isLight, setThemeMode } = useTheme()
+  const { isDark, isLight, setColorScheme } = useColorScheme()
 
   return (
     <>
-      <BiMoon onClick={() => setThemeMode('dark')} className={cls('footer-button', { hidden: isDark })} />
-      <BiSun onClick={() => setThemeMode('light')} className={cls('footer-button', { hidden: isLight })} />
+      <BiMoon onClick={() => setColorScheme('dark')} className={cls('footer-button', { hidden: isDark })} />
+      <BiSun onClick={() => setColorScheme('light')} className={cls('footer-button', { hidden: isLight })} />
     </>
   )
 }

@@ -1,17 +1,17 @@
 import { StyleProvider } from '@ant-design/cssinjs'
 import { App as AntApp, ConfigProvider as AntConfigProvider, theme as AntTheme } from 'antd'
-import React, { FC } from 'react'
+import { FC } from 'react'
 import { I18nextProvider } from 'react-i18next'
 import { RouterProvider } from 'react-router-dom'
 import { SWRConfig as SWRConfigProvider } from 'swr'
 import { get } from '@/api/fetcher'
 import { COLORS } from '@/constants/colors'
-import { useTheme } from '@/hooks/useTheme'
+import { useColorScheme } from '@/hooks/useColorScheme'
 import i18n from '@/locales/i18n'
 import { router } from '@/routes'
 
 const App: FC = () => {
-  const { isDark } = useTheme()
+  const { isDark } = useColorScheme()
 
   return (
     <I18nextProvider i18n={i18n}>
@@ -23,7 +23,7 @@ const App: FC = () => {
           revalidateOnFocus: import.meta.env.PROD,
         }}
       >
-        <StyleProvider hashPriority="high" layer>
+        <StyleProvider layer>
           <AntConfigProvider
             theme={{
               algorithm: AntTheme.darkAlgorithm,

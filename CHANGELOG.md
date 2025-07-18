@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.5.0](https://github.com/wwwenjie/react-starter/compare/v1.4.0...v1.5.0) (2025-07-18)
+
+
+### Features
+
+* add antd branch ([027d057](https://github.com/wwwenjie/react-starter/commit/027d057d7bf588912cc171e3f81ee20786591c6a))
+* add colors of text and background ([889451e](https://github.com/wwwenjie/react-starter/commit/889451e5b83b77f16d8cb4ea152064f8f85dfaed))
+* add formatDate and formatDateTime in utils ([daddce1](https://github.com/wwwenjie/react-starter/commit/daddce194d1cceefb2655c6cb3c83bb4835a59cf))
+* update deps, update eslint rules ([ba00799](https://github.com/wwwenjie/react-starter/commit/ba007998f57b83545f64666cb900f12ccef724e9))
+* add openapi-typescript for swr to make request type safe ([aa10851](https://github.com/wwwenjie/react-starter/commit/aa1085105bdc94aa4c2685b65c0978f0152c0441))
+
+
+### Bug Fixes
+
+* handle the style confilict between tailwind and antd ([94fa458](https://github.com/wwwenjie/react-starter/commit/94fa458d49690fc2edc11de079fd4a822e4658fb))
+* useTheme dosent share theme global ([00b8b36](https://github.com/wwwenjie/react-starter/commit/00b8b3678ee5d4988602d36e3f8fd221014a7fbb))
+
 ## [1.4.0](https://github.com/wwwenjie/react-starter/compare/v1.3.0...v1.4.0) (2022-08-19)
 
 

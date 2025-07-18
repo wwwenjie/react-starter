@@ -11,6 +11,7 @@ export const useColorScheme = (key = 'color-scheme', defaultColorScheme: ColorSc
   const isLight = colorScheme === 'auto' ? !prefersDarkMode : colorScheme === 'light'
 
   useEffect(() => {
+    // sync dark mode for tailwind
     document.documentElement.classList.toggle('dark', isDark)
   }, [isDark])
 

@@ -1,6 +1,7 @@
 import antfu from '@antfu/eslint-config'
 
 export default antfu({
+  ignores: ['**/api.d.ts'],
   typescript: {
     overrides: {
       'ts/consistent-type-imports': 'off',

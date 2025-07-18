@@ -4,7 +4,6 @@ import { FC } from 'react'
 import { I18nextProvider } from 'react-i18next'
 import { RouterProvider } from 'react-router-dom'
 import { SWRConfig as SWRConfigProvider } from 'swr'
-import { get } from '@/api/fetcher'
 import { COLORS } from '@/constants/colors'
 import { useColorScheme } from '@/hooks/useColorScheme'
 import i18n from '@/locales/i18n'
@@ -18,7 +17,6 @@ const App: FC = () => {
       <SWRConfigProvider
         // https://swr.vercel.app/docs/global-configuration
         value={{
-          fetcher: get,
           shouldRetryOnError: false,
           revalidateOnFocus: import.meta.env.PROD,
         }}

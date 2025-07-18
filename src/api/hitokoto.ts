@@ -1,14 +1,5 @@
-import useSWR from 'swr'
-import { minutes2Milliseconds } from '@/utils/date'
-
-export interface Hitokoto {
-  readonly id: string
-  readonly hitokoto: string
-  readonly from: string
-  readonly from_who: string
-}
+import { useQuery } from '@/api/hooks.ts'
+import { minutes2Milliseconds } from '@/utils/date.ts'
 
 export const useHitokoto = () =>
-  useSWR<Hitokoto>('https://v1.hitokoto.cn', {
-    dedupingInterval: minutes2Milliseconds(1),
-  })
+  useQuery('/', {}, { dedupingInterval: minutes2Milliseconds(1) })
